@@ -3,8 +3,8 @@ import java.util.Scanner;
 import java.io.FileInputStream;
 
 /*
-   사용하는 클래스명이 Solution 이어야 하므로, 가급적 Solution.java 를 사용할 것을 권장합니다.
-   이러한 상황에서도 동일하게 java Solution 명령으로 프로그램을 수행해볼 수 있습니다.
+   (1,x)에 해당하는 숫자 배열을 먼저 선언한 후에, 배열을 통해 입력값의 좌표 탐색 후
+   해당 좌표를 통해 결과값 도출 및 반환
  */
 class Solution
 {
