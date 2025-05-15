@@ -1,7 +1,5 @@
 import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.sql.SQLOutput;
 import java.util.*;
 
@@ -10,6 +8,7 @@ class Main
     static ArrayList<Integer> arr; static int n; static boolean flag;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
         n = Integer.parseInt(br.readLine());
         arr = new ArrayList<>();
@@ -24,9 +23,11 @@ class Main
             flag = false;
             int num = Integer.parseInt(st.nextToken());
             findNum(0,n-1,num);
-            if (flag) System.out.println(1);
-            else System.out.println(0);
+            if (flag) bw.write("1\n");
+            else bw.write("0\n");
         }
+        bw.flush();
+        bw.close();
     }
     static void findNum(int sta, int las, int num) {
         int mid = (sta+las)/2;
